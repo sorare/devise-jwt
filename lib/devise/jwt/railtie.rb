@@ -10,7 +10,7 @@ module Devise
         app.middleware.use Warden::JWTAuth::Middleware
 
         config.after_initialize do
-          Rails.application.reload_routes!
+          # Rails.application.reload_routes!
 
           Warden::JWTAuth.configure do |config|
             defaults = DefaultsGenerator.call
